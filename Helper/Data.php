@@ -136,6 +136,7 @@ class Data extends AbstractData
     {
         $whitelistIp = $this->getConfigGeneral(self::XML_PATH_WHITELIST_IP, $scopeId);
 
+        if (empty($whitelistIp)) return [];
         return explode(',', $whitelistIp);
     }
 
